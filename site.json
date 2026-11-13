@@ -1,0 +1,78 @@
+{
+ "logo_html": "はじめての<span>インスタ集客</span>",
+ "colors": {
+  "ACCENT_L": "#c2255c",
+  "ACCENT2_L": "#6741d9",
+  "ACCENT_D": "#f783ac",
+  "ACCENT2_D": "#b197fc"
+ },
+ "hero_title": "インスタは、順番どおりなら迷わない。",
+ "hero_text": "アカウント作りから集客まで、やることを10のステップに並べました。",
+ "home_description": "Instagram（インスタ）の使い方と集客のやり方を、はじめての人向けに10のステップで順番に解説。アカウント作成、プロフィール、プロアカウント、投稿、ハッシュタグ、リール、ストーリーズ、インサイト、集客の流れまで、公式ヘルプで確かめた情報で紹介します。",
+ "home_picks_title": "",
+ "picks_title_short": "",
+ "picks_title_long": "",
+ "about_html": "<p>数ある情報の中から、このサイトを見つけてくださり、ありがとうございます。</p><p>「はじめてのインスタ集客」は、Instagram（インスタ）をこれから始める人や、お店・サービスのお客さんを増やしたい人に向けて、使い方と集客のやり方を<strong>やる順番どおり</strong>に並べたサイトです。機能や数字は Instagram の公式ヘルプなどで確かめ、記事ごとに確認日を書いています。</p><p>このサイトは Instagram（Meta）の公式サイトではありません。個人が運営する非公式の解説サイトです。Instagram は Meta Platforms, Inc. の商標です。</p><p>アプリの画面や機能は、ときどき変わります。記事と画面が違う時は、公式ヘルプもあわせて見てみてください。</p>",
+ "picks": {},
+ "default_picks": [],
+ "category_slugs": {
+  "はじめる": "start",
+  "投稿する": "post",
+  "集客する": "grow"
+ },
+ "og": {
+  "line1": "はじめての",
+  "line2": "インスタ集客",
+  "sub": "10のステップで順番に",
+  "rings": [
+   "#f59f00",
+   "#d6336c",
+   "#ae3ec9",
+   "#7048e8"
+  ],
+  "style": "frame",
+  "card_sub": "10のステップで順番に"
+ },
+ "images": {
+  "motif": "rings",
+  "bg": "#2a0f24",
+  "colors": [
+   "#f59f00",
+   "#e8590c",
+   "#d6336c",
+   "#ae3ec9",
+   "#7048e8"
+  ]
+ },
+ "header_ai": false,
+ "profile_name": "まさび",
+ "profile_html": "大手印刷会社で約20年、製造・品質管理・営業支援を担当したのち、グラフィックデザイナーとして独立。いまは広告・ブランド相談の会社を運営しながら、自分でもインスタやSNSで発信しています。はじめての人がつまずきやすいところを、順番どおりに分かりやすくお伝えします。",
+ "next_step_html": "<p>最後まで読んでくださり、ありがとうございました。</p><p>まずは、この記事のステップを1つだけ、今日のうちにやってみませんか。5分でできることから始めると、次のステップが楽になります。</p><p>あなたのインスタで、いちばん届けたい相手はどんな人ですか？</p>",
+ "refs": {
+  "_label": "人気"
+ },
+ "featured": [
+  "instagram-hajimekata",
+  "profile-kakikata",
+  "pro-account-kirikae",
+  "toukou-shurui-chigai",
+  "hajimete-toukou"
+ ],
+ "hero_html": "<section class=\"ig-hero\">\n<p class=\"ig-eyebrow\">はじめてのインスタ集客</p>\n<h1 class=\"ig-h1\">インスタは、<br><em>順番どおり</em>なら迷わない。</h1>\n<p class=\"ig-lead\">アカウント作りから、お店やサービスにお客さんが来るまで。やることを10のステップに並べました。上から順に読むだけで、今日やることが分かります。</p>\n<div class=\"ig-rings\" aria-label=\"10のステップ\"><a class=\"ig-ring\" href=\"articles/instagram-hajimekata.html\"><span>1</span><small>アカウントを作る</small></a><a class=\"ig-ring\" href=\"articles/profile-kakikata.html\"><span>2</span><small>プロフィールを書く</small></a><a class=\"ig-ring\" href=\"articles/pro-account-kirikae.html\"><span>3</span><small>プロアカウントにする</small></a><a class=\"ig-ring\" href=\"articles/toukou-shurui-chigai.html\"><span>4</span><small>投稿の種類を知る</small></a><a class=\"ig-ring\" href=\"articles/hajimete-toukou.html\"><span>5</span><small>はじめて投稿する</small></a><a class=\"ig-ring\" href=\"articles/hashtag-tsukekata.html\"><span>6</span><small>ハッシュタグを付ける</small></a><a class=\"ig-ring\" href=\"articles/reel-tsukurikata.html\"><span>7</span><small>リールを作る</small></a><a class=\"ig-ring\" href=\"articles/story-tsukaikata.html\"><span>8</span><small>ストーリーズで話す</small></a><a class=\"ig-ring\" href=\"articles/insight-mikata.html\"><span>9</span><small>数字を見る</small></a><a class=\"ig-ring\" href=\"articles/shukyaku-junban.html\"><span>10</span><small>集客の順番を固める</small></a></div>\n<ol class=\"ig-road\"><li><a href=\"articles/instagram-hajimekata.html\"><span class=\"ig-n\">1</span><span class=\"ig-t\"><b>アカウントを作る</b><small>登録と最初の設定</small></span></a></li><li><a href=\"articles/profile-kakikata.html\"><span class=\"ig-n\">2</span><span class=\"ig-t\"><b>プロフィールを書く</b><small>名前・自己紹介・リンク</small></span></a></li><li><a href=\"articles/pro-account-kirikae.html\"><span class=\"ig-n\">3</span><span class=\"ig-t\"><b>プロアカウントにする</b><small>無料で数字が見える</small></span></a></li><li><a href=\"articles/toukou-shurui-chigai.html\"><span class=\"ig-n\">4</span><span class=\"ig-t\"><b>投稿の種類を知る</b><small>フィード・ストーリーズ・リール</small></span></a></li><li><a href=\"articles/hajimete-toukou.html\"><span class=\"ig-n\">5</span><span class=\"ig-t\"><b>はじめて投稿する</b><small>写真・文章・タグ付け</small></span></a></li><li><a href=\"articles/hashtag-tsukekata.html\"><span class=\"ig-n\">6</span><span class=\"ig-t\"><b>ハッシュタグを付ける</b><small>見つけてもらう入り口</small></span></a></li><li><a href=\"articles/reel-tsukurikata.html\"><span class=\"ig-n\">7</span><span class=\"ig-t\"><b>リールを作る</b><small>新しい人に届く動画</small></span></a></li><li><a href=\"articles/story-tsukaikata.html\"><span class=\"ig-n\">8</span><span class=\"ig-t\"><b>ストーリーズで話す</b><small>フォロワーと仲良くなる</small></span></a></li><li><a href=\"articles/insight-mikata.html\"><span class=\"ig-n\">9</span><span class=\"ig-t\"><b>数字を見る</b><small>インサイトで振り返る</small></span></a></li><li><a href=\"articles/shukyaku-junban.html\"><span class=\"ig-n\">10</span><span class=\"ig-t\"><b>集客の順番を固める</b><small>お店・サービスにつなげる</small></span></a></li></ol>\n<p class=\"ig-count\">いま読める記事：{N_ARTICLES}本</p>\n</section><script>(function(){try{var rd=JSON.parse(localStorage.getItem(\"ig-read\")||\"[]\")}catch(e){return}document.querySelectorAll(\".ig-road a,.ig-ring\").forEach(function(a){var s=a.getAttribute(\"href\").split(\"/\").pop().replace(\".html\",\"\");if(rd.indexOf(s)>=0)(a.closest(\"li\")||a).classList.add(\"seen\")})})()</script>",
+ "extra_css": "\n/* theme: story-gradient */\n:root{--grad:linear-gradient(45deg,#f59f00,#e8590c 30%,#d6336c 55%,#ae3ec9 80%,#7048e8);--pk:#c2255c}\n@media (prefers-color-scheme:dark){:root{--pk:#f783ac}}\nbody{font-family:\"M PLUS Rounded 1c\",\"Hiragino Sans\",\"Noto Sans JP\",sans-serif}\n.logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}\nheader{border-bottom:0}\nheader:after{content:\"\";display:block;height:3px;background:var(--grad)}\n.gnav a:hover,.gnav a.on{background:var(--grad);color:#fff}\n.tag{background:var(--grad)}\narticle h2{border-left:0;position:relative;padding-left:22px}\narticle h2:before{content:\"\";position:absolute;left:0;top:0;bottom:0;width:6px;border-radius:4px 0 0 4px;background:var(--grad)}\n.card{border-radius:18px}.thumb{border-radius:18px 18px 0 0}\n.next{border-color:var(--pk)}\n/* hero-base: */\n.ig-hero{text-align:center;padding:26px 0 6px}\n.ig-eyebrow{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.08em;margin:0 0 10px;padding:3px 14px;border-radius:99px;color:#fff;background:var(--grad)}\n.ig-h1{font-size:clamp(26px,5vw,38px);line-height:1.4;margin:0 0 12px}\n.ig-h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}\n.ig-lead{max-width:640px;margin:0 auto 18px;color:var(--muted);font-size:15px}\n.ig-rings{display:flex;gap:12px;overflow-x:auto;padding:8px 6px 12px;scrollbar-width:none}\n.ig-rings::-webkit-scrollbar{display:none}\n.ig-ring{flex:0 0 auto;width:76px;text-decoration:none;color:var(--fg);font-size:11px;line-height:1.35;position:relative;z-index:0}\n.ig-ring span{display:flex;align-items:center;justify-content:center;width:62px;height:62px;margin:5px auto 6px;border-radius:50%;font-weight:900;font-size:22px;background:var(--card);border:3px solid var(--bg);position:relative;transition:transform .2s}\n.ig-ring span:before{content:\"\";position:absolute;inset:-7px;border-radius:50%;background:var(--grad);z-index:-1}\n.ig-ring:hover span{transform:scale(1.06)}\n.ig-ring.seen span:before{background:var(--line)}\n.ig-ring small{display:block}\n.ig-road{list-style:none;padding:0;margin:8px auto 0;max-width:640px;text-align:left;position:relative}\n.ig-road:before{content:\"\";position:absolute;left:21px;top:20px;bottom:20px;width:3px;border-radius:3px;background:var(--grad)}\n.ig-road li{margin:0 0 10px;position:relative}\n.ig-road a{display:flex;gap:14px;align-items:center;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 14px 10px 6px;transition:transform .15s,border-color .15s}\n.ig-road a:hover{transform:translateX(4px);border-color:var(--pk)}\n.ig-n{flex:0 0 32px;height:32px;border-radius:50%;background:var(--grad);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;position:relative;z-index:1}\n.ig-t b{display:block;font-size:16px}.ig-t small{color:var(--muted);font-size:13px}\n.ig-road li.seen .ig-n{background:var(--muted)}\n.ig-road li.seen a:after{content:\"読んだ\";margin-left:auto;font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:0 8px;white-space:nowrap}\n.ig-count{font-size:13px;color:var(--muted);margin:10px 0 0}\n/* article-base: */\n.ig-bar{position:fixed;left:0;top:0;height:4px;width:0;background:var(--grad);z-index:50}\n.ig-step{display:inline-block;margin-left:8px;font-size:12px;font-weight:800;color:var(--pk);border:1.5px solid var(--pk);border-radius:99px;padding:0 10px;vertical-align:3px}\n.ig-nav{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 6px}\n.ig-nav a{flex:1 1 220px;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 16px;font-size:14px}\n.ig-nav a small{display:block;color:var(--muted);font-size:12px}\n.ig-nav a.nx{border:2px solid var(--pk)}\n.ig-nav a.nx b:after{content:\" →\"}\n.toc li.on>a{font-weight:800;color:var(--pk)}\n/* category-base: */\n.cx-head{text-align:center;padding:10px 0 4px}\n.cx-eye{display:inline-block;font-size:12px;font-weight:800;color:#fff;background:var(--grad);border-radius:99px;padding:2px 12px}\n.cx-head h1{font-size:26px;margin:10px 0 6px}.cx-head p{color:var(--muted);margin:0 0 6px;font-size:14px}\n.cx-others{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:10px 0}\n.cx-others a{font-size:13px;text-decoration:none;color:var(--fg);background:var(--soft);border-radius:99px;padding:4px 12px}\n.cx-others small{margin-left:6px;color:var(--muted)}\n",
+ "font_import": "@import url(\"https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800;900&display=swap\");\n",
+ "article_js": "<script>(function(O,N){\nvar slug=location.pathname.split(\"/\").pop().replace(\".html\",\"\"),i=O.indexOf(slug);\ntry{var rd=JSON.parse(localStorage.getItem(\"ig-read\")||\"[]\");if(rd.indexOf(slug)<0){rd.push(slug);localStorage.setItem(\"ig-read\",JSON.stringify(rd))}}catch(e){}\nvar bar=document.createElement(\"div\");bar.className=\"ig-bar\";document.body.appendChild(bar);\naddEventListener(\"scroll\",function(){var h=document.documentElement;bar.style.width=Math.min(100,100*h.scrollTop/((h.scrollHeight-h.clientHeight)||1))+\"%\"},{passive:true});\nvar hs=[].slice.call(document.querySelectorAll(\"article h2[id]\")),ls=[].slice.call(document.querySelectorAll(\".toc li\"));\nif(hs.length&&ls.length)addEventListener(\"scroll\",function(){var k=-1;hs.forEach(function(h,j){if(h.getBoundingClientRect().top<120)k=j});ls.forEach(function(l,j){l.classList.toggle(\"on\",j===k)})},{passive:true});\nif(i<0)return;var h1=document.querySelector(\"article h1\");if(h1){var s=document.createElement(\"span\");s.className=\"ig-step\";s.textContent=\"STEP \"+(i+1)+\" / \"+O.length;h1.appendChild(s)}\nvar nv=document.createElement(\"div\");nv.className=\"ig-nav\";var x=\"\";\nif(i>0)x+='<a href=\"'+O[i-1]+'.html\"><small>前のSTEP '+i+'</small><b>'+N[i-1]+'</b></a>';\nif(i<O.length-1)x+='<a class=\"nx\" href=\"'+O[i+1]+'.html\"><small>次のSTEP '+(i+2)+'</small><b>'+N[i+1]+'</b></a>';\nelse x+='<a class=\"nx\" href=\"../index.html\"><small>10のステップ</small><b>はじめから見直す</b></a>';\nnv.innerHTML=x;var nx=document.querySelector(\".next\");if(nx)nx.parentNode.insertBefore(nv,nx);\n})([\"instagram-hajimekata\", \"profile-kakikata\", \"pro-account-kirikae\", \"toukou-shurui-chigai\", \"hajimete-toukou\", \"hashtag-tsukekata\", \"reel-tsukurikata\", \"story-tsukaikata\", \"insight-mikata\", \"shukyaku-junban\"],[\"アカウントを作る\", \"プロフィールを書く\", \"プロアカウントにする\", \"投稿の種類を知る\", \"はじめて投稿する\", \"ハッシュタグを付ける\", \"リールを作る\", \"ストーリーズで話す\", \"数字を見る\", \"集客の順番を固める\"])</script>",
+ "category_head_html": "<header class=\"cx-head\"><span class=\"cx-eye\">PART {NO} ・ {N}本</span><h1>{CAT}</h1><p>{INTRO}</p><div class=\"cx-others\">{OTHERS}</div></header>",
+ "category_intros": {
+  "はじめる": "アカウントを作って、プロフィールを整えて、プロアカウントにするまで。STEP 1〜3です。",
+  "投稿する": "投稿の種類、はじめての投稿、ハッシュタグ、リール。STEP 4〜7です。",
+  "集客する": "ストーリーズ、数字の見方、お店やサービスにつなげる順番。STEP 8〜10です。"
+ },
+ "category_order": [
+  "はじめる",
+  "投稿する",
+  "集客する"
+ ],
+ "vc_ads": [],
+ "a8_ads": []
+}
