@@ -486,6 +486,29 @@ def write(path, s):
     os.makedirs(os.path.dirname(p), exist_ok=True)
     open(p, "w", encoding="utf-8").write(s.replace("LOGO_HTML", SITECFG["logo_html"]))
 
+# 2026-11-13: 見出しごとの挿絵。assets/articles/<slug>--s<N>.jpg があれば、<h2 id="sN"> の直後に入れる（幅960に縮小して img/sec/ へ）
+def sec_images(a, art):
+    if not IMAGES:
+        return art
+    from PIL import Image
+    for n, t in enumerate(a["toc"], 1):
+        src = os.path.join(ROOT, "assets", "articles", "%s--s%d.jpg" % (a["slug"], n))
+        if not os.path.exists(src):
+            continue
+        name = "%s--s%d.jpg" % (a["slug"], n)
+        dst = os.path.join(OUT, "img", "sec", name)
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        if not os.path.exists(dst) or os.path.getmtime(dst) < os.path.getmtime(src):
+            im = Image.open(src).convert("RGB")
+            im.thumbnail((960, 960))
+            im.save(dst, "JPEG", quality=82, optimize=True)
+        alt = "AIで作成したイメージ画像：" + re.sub(r"<[^>]+>", "", inline(t))
+        fig = '<figure class="sec-img"><img loading="lazy" decoding="async" src="../img/sec/%s" alt="%s" width="960" height="536"></figure>' % (name, html.escape(alt))
+        m = re.search(r'<h2 id="s%d">.*?</h2>' % n, art)
+        if m:
+            art = art[:m.end()] + fig + art[m.end():]
+    return art
+
 def build():
     global CATS, SIDEBAR
     e = html.escape
@@ -568,6 +591,7 @@ def build():
             art = art[:k] + picks_box(cat, SITECFG["picks_title_long"]) + vc_box(cat, a["slug"]) + book_box() + art[k:]
         else:
             art += picks_box(cat, SITECFG["picks_title_long"]) + vc_box(cat, a["slug"]) + book_box()
+        art = sec_images(a, art)
         cu = "category/%s.html" % cat_slug(cat)
         body = ('%s<article><a class="tag" href="../%s">%s</a><span class="date">%s</span><h1>%s</h1>%s%s'
                 '<div class="lead"><strong>この記事でわかること</strong>%s</div>%s</article>%s%s%s'

@@ -64,6 +64,8 @@ article h2:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;b
 .ig-road li.seen a:after{content:"読んだ";margin-left:auto;font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:0 8px;white-space:nowrap}
 .ig-count{font-size:13px;color:var(--muted);margin:10px 0 0}
 /* article-base: */
+.sec-img{margin:6px 0 18px;padding:0}
+.sec-img img{display:block;width:100%;height:auto;aspect-ratio:1024/572;object-fit:cover;border-radius:18px;border:1px solid var(--line);background:var(--card)}
 .ig-bar{position:fixed;left:0;top:0;height:4px;width:0;background:var(--grad);z-index:50}
 .ig-step{display:inline-block;margin-left:8px;font-size:12px;font-weight:800;color:var(--pk);border:1.5px solid var(--pk);border-radius:99px;padding:0 10px;vertical-align:3px}
 .ig-nav{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 6px}
