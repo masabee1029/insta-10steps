@@ -397,6 +397,12 @@ PR_TEXT = "※本サイトはプロモーション（広告）を含みます。
 CATS = []          # build() で埋める: [(カテゴリ名, 記事数)]
 SIDEBAR = ""       # build() で埋める（各ページ共通）
 
+# 2026-11-13: 商品リンクも広告も無いサイトでは、広告の表記を「無い」と正しく書く
+NO_ADS = not (PICKS or DEFAULT_PICKS or VC_ADS or SITECFG.get("book_box"))
+if NO_ADS:
+    PR_TEXT = "※本サイトには、いま広告や商品リンクはありません。"
+    PR_LINE = ""
+
 def cat_slug(c):
     return (SITECFG.get("category_slugs") or {}).get(c) or "c" + hashlib.md5(c.encode()).hexdigest()[:6]
 
@@ -563,10 +569,10 @@ def build():
         else:
             art += picks_box(cat, SITECFG["picks_title_long"]) + vc_box(cat, a["slug"]) + book_box()
         cu = "category/%s.html" % cat_slug(cat)
-        body = ('%s<article><a class="tag" href="../%s">%s</a><span class="date">%s</span><h1>%s</h1><p class="prline">%s</p>%s'
+        body = ('%s<article><a class="tag" href="../%s">%s</a><span class="date">%s</span><h1>%s</h1>%s%s'
                 '<div class="lead"><strong>この記事でわかること</strong>%s</div>%s</article>%s%s%s'
                 % (crumbs([("ホーム", "../index.html"), (cat, "../" + cu), (a["title"], None)]),
-                   cu, e(cat), a["date"], e(a["title"]), PR_LINE,
+                   cu, e(cat), a["date"], e(a["title"]), ('<p class="prline">%s</p>' % PR_LINE) if PR_LINE else "",
                    ('<img class="eyecatch" src="../img/articles/%s.jpg" alt="%s">' % (a["slug"], e(eyecatch_alt(a)))) if IMAGES else "",
                    e(a["description"]), art + next_step_box() + '<p class="ainote">%s%s</p>' % (AI_NOTE, AI_NOTE_IMG if eyecatch_is_ai(a["slug"]) else "") + (CHART_JS if 'class="kxc"' in art else "") + SITECFG.get("article_js", ""), share(SITE + a["url"], a["title"]), author_box("../"), rel))
         ld = jsonld({"@context": "https://schema.org", "@type": "Article", "headline": a["title"], "description": a["description"],
@@ -577,13 +583,16 @@ def build():
         write(a["url"], page(a["title"], a["description"], body, a["url"], 1,
                              ("img/articles/%s.jpg" % a["slug"]) if IMAGES else "og.png", ld=ld, cat_on=cat))
     about = ('<article><h1>このサイトについて</h1>' + SITECFG["about_html"] +
-             '<h2>広告について</h2><p>当サイトは Amazonアソシエイト・楽天アフィリエイトに参加しており、紹介した商品の購入により運営者が紹介料を受け取ることがあります。Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。</p>'
+             ('<h2>広告について</h2><p>いまは広告や商品リンクを置いていません。置くことになった時は、このページと各記事でお知らせします。</p>' if NO_ADS else
+             '<h2>広告について</h2><p>当サイトは Amazonアソシエイト・楽天アフィリエイトに参加しており、紹介した商品の購入により運営者が紹介料を受け取ることがあります。Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。</p>')
              + SITECFG.get("ads_extra_html", "") + '</article>')
     write("about.html", page("このサイトについて", NAME + "の運営方針と広告について。", about, "about.html"))
     privacy = """<article><h1>プライバシーポリシー</h1>
 <h2>アクセス解析</h2><p>当サイトは Google アナリティクスを利用しています。Cookie を使ってアクセス情報を収集しますが、個人を特定する情報は含みません。Cookie はブラウザの設定で無効にできます。</p>
 <h2>広告</h2><p>当サイトは Amazonアソシエイト・楽天アフィリエイト%sを利用しています。これらのサービスは Cookie を使用することがあります。</p>
 <h2>免責事項</h2><p>掲載内容の正確性には注意していますが、内容を保証するものではありません。当サイトの情報によって生じた損害について責任を負いかねます。</p></article>""" % SITECFG.get("asp_names", "")
+    if NO_ADS:
+        privacy = re.sub(r"<h2>広告</h2><p>.*?</p>", "<h2>広告</h2><p>当サイトには、いま広告や商品リンクはありません。</p>", privacy)
     write("privacy.html", page("プライバシーポリシー", NAME + "のプライバシーポリシーと免責事項。", privacy, "privacy.html", sidebar=False))
     urls = ["index.html", "about.html", "privacy.html"] + ["category/%s.html" % cat_slug(c) for c, _ in CATS] + [a["url"] for a in arts]
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
