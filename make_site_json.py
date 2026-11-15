@@ -83,7 +83,7 @@ article h2:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;b
 @media (prefers-reduced-motion:reduce){.zk .hit,.zk .hit2,.zk .ring{animation:none}}
 .zk text{font-family:inherit;text-anchor:middle;fill:var(--muted)}
 .zk .big{font-size:16px;font-weight:900;fill:var(--pk)}
-.zk .t{font-size:9px;font-weight:700}.zk .t.on{fill:var(--pk)}.zk .t.l{text-anchor:start}.zk .t.w{fill:#fff;font-size:10px}
+.zk .t{font-size:9px;font-weight:700}.zk .t.on{fill:var(--pk)}.zk .t.l{text-anchor:start}.zk .t.w{fill:#fff;font-size:10px}.zk .t.sm{font-size:7.5px}
 .zk .sel{fill:none;stroke:var(--pk);stroke-width:2.5}.zk .chk{fill:var(--pk)}
 .zk .sun{fill:#f59f00;opacity:.8}.zk .knob{fill:var(--pk)}
 .zk .field{fill:none;stroke:var(--pk);stroke-width:2}.zk .cur{stroke:var(--pk);stroke-width:1.5}
