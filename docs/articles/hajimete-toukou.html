@@ -138,6 +138,34 @@ article h2:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;b
 .ig-road li.seen .ig-n{background:var(--muted)}
 .ig-road li.seen a:after{content:"読んだ";margin-left:auto;font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:0 8px;white-space:nowrap}
 .ig-count{font-size:13px;color:var(--muted);margin:10px 0 0}
+/* zukai: */
+.zk{margin:8px 0 22px;padding:16px;border:1px solid var(--line);border-radius:18px;background:var(--card)}
+.zk-h{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;margin:0 0 12px}
+.zk-h b{font-size:17px}.zk-h small{color:var(--muted);font-size:13px}
+.zk-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 12px}
+@media (min-width:640px){.zk-steps{grid-template-columns:repeat(4,1fr)}}
+.zk-steps li{margin:0;text-align:center}
+.zk-ph{max-width:132px;margin:0 auto 6px;padding:7px;border-radius:20px;background:var(--fg)}
+.zk-ph svg{display:block;width:100%;height:auto;border-radius:14px;background:var(--bg)}
+.zk-steps p{margin:0;font-size:13px;line-height:1.5}
+.zk-n{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;margin-right:4px;border-radius:50%;background:var(--grad);color:#fff;font-weight:900;font-size:12px;vertical-align:1px}
+.zk-note{margin:12px 0 0;font-size:12px;color:var(--muted)}
+.zk .s{fill:var(--line)}.zk .p{fill:var(--soft,var(--line));stroke:var(--line)}
+.zk .ln{stroke:var(--line);stroke-width:1.5}
+.zk .hit{fill:none;stroke:var(--pk);stroke-width:3;animation:zkp 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.zk .hit2,.zk .ring{fill:none;stroke:var(--pk);stroke-width:2.5;animation:zkp 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes zkp{0%,100%{opacity:1}50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.zk .hit,.zk .hit2,.zk .ring{animation:none}}
+.zk text{font-family:inherit;text-anchor:middle;fill:var(--muted)}
+.zk .big{font-size:16px;font-weight:900;fill:var(--pk)}
+.zk .t{font-size:9px;font-weight:700}.zk .t.on{fill:var(--pk)}.zk .t.l{text-anchor:start}.zk .t.w{fill:#fff;font-size:10px}
+.zk .sel{fill:none;stroke:var(--pk);stroke-width:2.5}.zk .chk{fill:var(--pk)}
+.zk .sun{fill:#f59f00;opacity:.8}.zk .knob{fill:var(--pk)}
+.zk .field{fill:none;stroke:var(--pk);stroke-width:2}.zk .cur{stroke:var(--pk);stroke-width:1.5}
+.zk .kb{fill:var(--line);opacity:.5}.zk .keys rect{fill:var(--bg)}
+.zk .ic{fill:none;stroke:var(--pk);stroke-width:1.8}
+.zk .go{fill:#d6336c}.zk .new{fill:none;stroke:var(--pk);stroke-width:2.5}.zk .ok{fill:none;stroke:var(--pk);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.zk-done .zk-ph{outline:3px solid var(--pk);outline-offset:2px}
 /* article-base: */
 .sec-img{margin:6px 0 18px;padding:0}
 .sec-img img{display:block;width:100%;height:auto;aspect-ratio:1024/572;object-fit:cover;border-radius:18px;border:1px solid var(--line);background:var(--card)}
@@ -167,6 +195,20 @@ article h2:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;b
 <div class="toc"><strong>目次</strong><ol><li><a href="#s1">投稿のやり方（押す順番）</a></li><li><a href="#s2">写真の選び方</a></li><li><a href="#s3">説明文（キャプション）の書き方の型</a></li><li><a href="#s4">人のタグ付けと、お店の場所の追加</a></li><li><a href="#s5">最初の3投稿で「自己紹介」をする</a></li><li><a href="#s6">投稿したあとで、直せること・直せないこと</a></li><li><a href="#s7">よくある質問</a></li><li><a href="#s8">まとめ</a></li></ol></div><h2 id="s1">投稿のやり方（押す順番）</h2>
 <p>投稿は、スマホのアプリからできます。<br>むずかしい操作はありません。上から順に進めれば大丈夫です。</p>
 <ol><li>画面の下にある「＋」を押す</li><li>出てきた中から「投稿」を選ぶ</li><li>載せたい写真や動画を選ぶ</li><li>必要なら、明るさなどを調整する</li><li>キャプション（写真の下に出る説明文）を書く</li><li>人のタグ付けや、お店の場所を追加する</li><li>最後に「シェア」を押す</li></ol>
+<figure class="zk" aria-label="図解：インスタの投稿のやり方（7つの手順）">
+<figcaption class="zk-h"><b>図解：投稿は7つの手順</b><small>ピンクの丸のところを押します</small></figcaption>
+<ol class="zk-steps">
+<li><div class="zk-ph"><svg viewBox="0 0 120 200" aria-hidden="true"><rect class="s" x="12" y="18" width="96" height="10" rx="3"/><rect class="p" x="12" y="36" width="30" height="30" rx="3"/><rect class="p" x="45" y="36" width="30" height="30" rx="3"/><rect class="p" x="78" y="36" width="30" height="30" rx="3"/><rect class="p" x="12" y="69" width="30" height="30" rx="3"/><rect class="p" x="45" y="69" width="30" height="30" rx="3"/><rect class="p" x="78" y="69" width="30" height="30" rx="3"/><rect class="s" x="12" y="108" width="70" height="6" rx="3"/><rect class="s" x="12" y="120" width="50" height="6" rx="3"/><line class="ln" x1="0" y1="170" x2="120" y2="170"/><circle class="s" cx="20" cy="185" r="5"/><circle class="s" cx="40" cy="185" r="5"/><circle class="s" cx="80" cy="185" r="5"/><circle class="s" cx="100" cy="185" r="5"/><circle class="hit" cx="60" cy="185" r="12"/><text class="big" x="60" y="190">＋</text></svg></div><p><span class="zk-n">1</span>画面の下の<b>「＋」</b>を押す</p></li>
+<li><div class="zk-ph"><svg viewBox="0 0 120 200" aria-hidden="true"><rect class="p" x="12" y="18" width="96" height="120" rx="4"/><rect class="hit2" x="10" y="166" width="34" height="20" rx="10"/><text class="t on" x="27" y="180">投稿</text><text class="t" x="62" y="180">ストーリー</text><text class="t" x="98" y="180">リール</text></svg></div><p><span class="zk-n">2</span>出てきた中から<b>「投稿」</b>を選ぶ</p></li>
+<li><div class="zk-ph"><svg viewBox="0 0 120 200" aria-hidden="true"><rect class="hit2" x="82" y="8" width="32" height="18" rx="9"/><text class="t on" x="98" y="21">次へ</text><rect class="p" x="12" y="32" width="96" height="70" rx="4"/><rect class="p" x="12" y="108" width="30" height="30" rx="3"/><rect class="p" x="45" y="108" width="30" height="30" rx="3"/><rect class="p" x="78" y="108" width="30" height="30" rx="3"/><rect class="p" x="12" y="141" width="30" height="30" rx="3"/><rect class="p" x="45" y="141" width="30" height="30" rx="3"/><rect class="p" x="78" y="141" width="30" height="30" rx="3"/><rect class="sel" x="12" y="108" width="30" height="30" rx="3"/><circle class="chk" cx="36" cy="114" r="5"/></svg></div><p><span class="zk-n">3</span>写真を選んで<b>「次へ」</b>（右上）</p></li>
+<li><div class="zk-ph"><svg viewBox="0 0 120 200" aria-hidden="true"><rect class="hit2" x="82" y="8" width="32" height="18" rx="9"/><text class="t on" x="98" y="21">次へ</text><rect class="p" x="12" y="32" width="96" height="96" rx="4"/><circle class="sun" cx="60" cy="80" r="14"/><line class="ln" x1="16" y1="150" x2="104" y2="150"/><circle class="knob" cx="74" cy="150" r="6"/><rect class="s" x="14" y="166" width="24" height="24" rx="4"/><rect class="s" x="48" y="166" width="24" height="24" rx="4"/><rect class="s" x="82" y="166" width="24" height="24" rx="4"/></svg></div><p><span class="zk-n">4</span>必要なら明るさなどを調整</p></li>
+<li><div class="zk-ph"><svg viewBox="0 0 120 200" aria-hidden="true"><rect class="p" x="12" y="18" width="34" height="34" rx="3"/><rect class="field" x="52" y="18" width="56" height="60" rx="4"/><rect class="s" x="57" y="25" width="44" height="5" rx="2"/><rect class="s" x="57" y="35" width="38" height="5" rx="2"/><rect class="s" x="57" y="45" width="30" height="5" rx="2"/><line class="cur" x1="90" y1="44" x2="90" y2="52"/><rect class="kb" x="0" y="120" width="120" height="80"/><g class="keys"><rect x="6" y="128" width="16" height="14" rx="2"/><rect x="26" y="128" width="16" height="14" rx="2"/><rect x="46" y="128" width="16" height="14" rx="2"/><rect x="66" y="128" width="16" height="14" rx="2"/><rect x="86" y="128" width="16" height="14" rx="2"/><rect x="6" y="148" width="16" height="14" rx="2"/><rect x="26" y="148" width="16" height="14" rx="2"/><rect x="46" y="148" width="16" height="14" rx="2"/><rect x="66" y="148" width="16" height="14" rx="2"/><rect x="86" y="148" width="16" height="14" rx="2"/><rect x="26" y="168" width="56" height="14" rx="2"/></g></svg></div><p><span class="zk-n">5</span>キャプション（説明文）を書く</p></li>
+<li><div class="zk-ph"><svg viewBox="0 0 120 200" aria-hidden="true"><rect class="p" x="12" y="18" width="34" height="34" rx="3"/><rect class="s" x="52" y="24" width="50" height="5" rx="2"/><rect class="s" x="52" y="34" width="40" height="5" rx="2"/><line class="ln" x1="8" y1="66" x2="112" y2="66"/><rect class="hit2" x="8" y="72" width="104" height="26" rx="8"/><circle class="ic" cx="22" cy="81" r="4"/><path class="ic" d="M15 93 q7 -9 14 0"/><text class="t l on" x="36" y="89">人をタグ付け</text><rect class="hit2" x="8" y="104" width="104" height="26" rx="8"/><path class="ic" d="M22 125 l-6 -9 a6 6 0 1 1 12 0 z"/><text class="t l on" x="36" y="121">場所を追加</text><line class="ln" x1="8" y1="138" x2="112" y2="138"/><rect class="s" x="12" y="148" width="60" height="5" rx="2"/><rect class="s" x="12" y="162" width="44" height="5" rx="2"/></svg></div><p><span class="zk-n">6</span>人のタグ付け・お店の場所を追加</p></li>
+<li><div class="zk-ph"><svg viewBox="0 0 120 200" aria-hidden="true"><rect class="p" x="12" y="18" width="34" height="34" rx="3"/><rect class="s" x="52" y="24" width="50" height="5" rx="2"/><rect class="s" x="52" y="34" width="40" height="5" rx="2"/><line class="ln" x1="8" y1="66" x2="112" y2="66"/><rect class="s" x="12" y="78" width="70" height="6" rx="3"/><rect class="s" x="12" y="96" width="56" height="6" rx="3"/><rect class="s" x="12" y="114" width="64" height="6" rx="3"/><rect class="go" x="10" y="164" width="100" height="24" rx="8"/><text class="t w" x="60" y="180">シェア</text><rect class="ring" x="6" y="160" width="108" height="32" rx="11"/></svg></div><p><span class="zk-n">7</span>最後に<b>「シェア」</b>を押す</p></li>
+<li class="zk-done"><div class="zk-ph"><svg viewBox="0 0 120 200" aria-hidden="true"><circle class="s" cx="30" cy="34" r="14"/><rect class="s" x="52" y="26" width="50" height="6" rx="3"/><rect class="s" x="52" y="38" width="36" height="6" rx="3"/><rect class="new" x="12" y="62" width="30" height="30" rx="3"/><rect class="p" x="45" y="62" width="30" height="30" rx="3"/><rect class="p" x="78" y="62" width="30" height="30" rx="3"/><rect class="p" x="12" y="95" width="30" height="30" rx="3"/><rect class="p" x="45" y="95" width="30" height="30" rx="3"/><rect class="p" x="78" y="95" width="30" height="30" rx="3"/><path class="ok" d="M20 77 l6 6 l10 -11"/></svg></div><p><span class="zk-n">✓</span>プロフィールに投稿が並べば完成</p></li>
+</ol>
+<p class="zk-note">画面は分かりやすく描いた絵です。ボタンの位置や形は、アプリの新しさで少し変わることがあります。</p>
+</figure>
 <p>「シェア」を押すと、投稿がプロフィールに並びます。<br>これで1つめの投稿はおしまいです。</p>
 <p>写真を何枚か選ぶと、カルーセル（左右にめくって見る、何枚かまとめた投稿）になります。<br>1つの投稿に、最大20枚まで入れられます。<br>カルーセルのくわしい話は、<a href="toukou-shurui-chigai.html">STEP 4 で紹介したカルーセル</a>で読めます。</p>
 <h2 id="s2">写真の選び方</h2>

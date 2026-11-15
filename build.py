@@ -9,6 +9,7 @@
     ---
     本文（Markdown の簡易版: ## 見出し, - 箇条書き, 1. 番号, **太字**, [文字](URL), | 表 |）
     商品ボタン: [[shop:検索キーワード|表示名]]　宿のボタン: [[travel:地名や会場名|表示名]]
+    図解: [[zukai:名前]]（assets/zukai/名前.html をそのまま入れる）
     動くグラフ: [[chart:種類|題名|ラベル=数値, ラベル=数値|単位|出典や注記]]（種類: bar / counter / donut / line。
     画面に入ると棒が伸びる・数字が数え上がる・円が回り込む・線が描かれる。「もう一度」ボタンと表で見る欄つき。数値は本当のものだけ）
 
@@ -252,6 +253,11 @@ def md(text):
         ln = lines[i].rstrip()
         m = re.match(r"\[\[(shop|travel):(.+?)\|(.+?)\]\]$", ln.strip())
         if not ln.strip():
+            i += 1; continue
+        mz = re.match(r"\[\[zukai:([a-z0-9-]+)\]\]$", ln.strip())
+        if mz:
+            zp = os.path.join(ROOT, "assets", "zukai", mz.group(1) + ".html")
+            if os.path.exists(zp): out.append(open(zp, encoding="utf-8").read().strip())
             i += 1; continue
         mc = re.match(r"\[\[chart:(bar|counter|donut|line)\|(.+?)\|(.+?)(?:\|(.*?))?(?:\|(.*?))?\]\]$", ln.strip())
         if mc:
