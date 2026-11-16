@@ -278,7 +278,7 @@ def z_insight():
           "その投稿の「フォロワー以外」の割合を見る", "良かった理由を、1つだけ考える", "次の月は、その理由を取り入れて投稿"]
     li = "".join('<li><span class="zk-n">%d</span>%s</li>' % (i, b(s)) for i, s in enumerate(st, 1))
     return ('<figure class="zk" aria-label="図解：月1回の振り返り">\n<figcaption class="zk-h"><b>図解：月1回の振り返り（6つの手順）</b><small>6まで行ったら、次の月にまた1から</small></figcaption>\n'
-            '<ol class="zk-cycle">%s</ol>\n<p class="zk-note">大切なのは、良かった理由を1つにしぼることです。いくつも一度に変えると、何が効いたのか分からなくなります。</p>\n</figure>\n' % li)
+            '<ol class="zk-cycle">%s</ol>\n</figure>\n' % li)
 
 OUT = {
     "hajimekata": z_hajimekata, "pro": z_pro, "profile": z_profile, "shurui": z_shurui,
