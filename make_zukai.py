@@ -98,7 +98,7 @@ def tabs(sel):
     xs = [21, 63, 104]
     o = ""
     for i, (s, x) in enumerate(zip(labs, xs)):
-        cls = "t on" if i == sel else "t sm"
+        cls = ("t on" + (" sm" if len(s) > 3 else "")) if i == sel else "t sm"
         o += T(x, 179, s, cls)
     hx = {0: (6, 30), 1: (38, 50), 2: (90, 28)}[sel]
     o += '<rect class="hit2" x="%d" y="166" width="%d" height="20" rx="10"/>' % hx
@@ -218,7 +218,7 @@ def z_shurui():
         card(hl, "ハイライト", "ストーリーズをプロフィールに残す", "残る", "プロフィールを見た人"),
     ])
     return ('<figure class="zk zk-types" aria-label="図解：投稿の種類5つ">\n<figcaption class="zk-h"><b>図解：投稿の種類5つ</b><small>上が「残るか消えるか」、下が「主に届く相手」</small></figcaption>\n<ul class="zk-steps">%s</ul>\n'
-            '<p class="zk-note">まだ知らない人に見つけてもらうなら、「フォロワー以外にも」届きやすいリールが向いています。画面は分かりやすく描いた絵です。</p>\n</figure>\n' % li)
+            '<p class="zk-note">画面は分かりやすく描いた絵です。「フォロワー以外にも」届きやすいのは、リールだけです。</p>\n</figure>\n' % li)
 
 # ---------- 5. タグの言葉の見つけ方（STEP 6） ----------
 def z_hashtag():
@@ -270,7 +270,7 @@ def z_junban():
     ]
     li = "".join('<li class="%s"><span class="zk-n">%d</span><b>%s</b><q>%s</q><small>使う機能：%s</small></li>' % (c, i, E(a), E(q), E(f)) for i, (a, q, f, c) in enumerate(st, 1))
     return ('<figure class="zk" aria-label="図解：集客の3つの段階">\n<figcaption class="zk-h"><b>図解：集客の3つの段階</b><small>上から下へ、お客さんの気持ちが進みます</small></figcaption>\n'
-            '<ol class="zk-funnel">%s</ol>\n<p class="zk-note">つまり、段階ごとに使う機能が違います。迷ったら「お客さんはいま、どの段階？」と考えると、次にやることが決まります。</p>\n</figure>\n' % li)
+            '<ol class="zk-funnel">%s</ol>\n<p class="zk-note">「何を投稿すればいい？」と迷った時は、お客さんがいまどの段階にいるかを考えると、次にやることが決まります。</p>\n</figure>\n' % li)
 
 # ---------- 9. 月1回の振り返り（STEP 9） ----------
 def z_insight():

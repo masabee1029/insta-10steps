@@ -115,7 +115,7 @@ article h2:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;b
 @media (min-width:640px){.zk-types .zk-steps{grid-template-columns:repeat(5,1fr)}}
 .zk-types small{color:var(--muted);font-size:12px}
 .zk-tags{display:flex;flex-direction:column;gap:4px;align-items:center;margin-top:6px!important}
-.zk-tags span{font-size:11px;font-weight:800;border-radius:99px;padding:1px 10px;border:1.5px solid var(--line)}
+.zk-tags span{white-space:nowrap;font-size:10.5px;font-weight:800;border-radius:99px;padding:1px 10px;border:1.5px solid var(--line)}
 .zk-tags .ok{color:#2f9e44;border-color:#2f9e44}.zk-tags .ng{color:#e8590c;border-color:#e8590c}.zk-tags .hot{color:#fff;background:var(--grad);border-color:transparent}
 .zk-funnel{list-style:none;margin:0 auto;padding:0;max-width:560px}
 .zk-funnel li{position:relative;margin:0 auto 22px;padding:12px 16px;border-radius:16px;color:#fff;text-align:center;line-height:1.55}
