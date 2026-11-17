@@ -280,9 +280,53 @@ def z_insight():
     return ('<figure class="zk" aria-label="図解：月1回の振り返り">\n<figcaption class="zk-h"><b>図解：月1回の振り返り（6つの手順）</b><small>6まで行ったら、次の月にまた1から</small></figcaption>\n'
             '<ol class="zk-cycle">%s</ol>\n</figure>\n' % li)
 
+# ---------- 番外編 人のタグ付け（2026-11-17） ----------
+def _tap(cx, cy):
+    return '<circle class="hit" cx="%d" cy="%d" r="9"/><circle class="chk" cx="%d" cy="%d" r="3"/>' % (cx, cy, cx, cy)
+
+def _bubble(x, y):
+    return '<path class="bub" d="M%d %d l5 -6 h22 a4 4 0 0 1 4 4 v0 h0" fill="none"/><rect class="bubr" x="%d" y="%d" width="52" height="14" rx="4"/><path class="bubr" d="M%d %d l4 -5 l4 5 z"/>' % (x, y, x - 22, y, x - 4, y + 1)
+
+def _acct(y, hit=False):
+    o = '<circle class="s" cx="20" cy="%d" r="7"/>' % (y + 9) + bars(32, y + 4, [50, 34], gap=8, h=4)
+    if hit: o = '<rect class="hit2" x="8" y="%d" width="104" height="20" rx="7"/>' % y + o
+    return o
+
+def _search(name_w=36):
+    return '<rect class="field" x="10" y="14" width="100" height="18" rx="9"/><circle class="ic" cx="20" cy="23" r="4"/>' + bars(28, 21, [name_w])
+
+def _post_head():
+    return '<circle class="s" cx="18" cy="16" r="7"/>' + bars(30, 13, [40])
+
+def z_tag():
+    f = [
+        ('<rect class="p" x="12" y="18" width="34" height="34" rx="3"/>' + bars(52, 24, [50, 40]) + rows(64, ["人をタグ付け", "場所を追加"], hit=0) + bars(12, 130, [70, 50]), "キャプションの画面で「人をタグ付け」を押す"),
+        (photo(8, 30, 104, 120) + _tap(44, 100), "写真の中の、付けたい場所を押す"),
+        (_search() + '<line class="cur" x1="66" y1="18" x2="66" y2="28"/>' + keyboard(), "相手の名前かユーザーネームを入れる"),
+        (_search() + _acct(42) + _acct(66, True) + _acct(90), "出てきた一覧から相手を選ぶ"),
+        (topnext("完了") + photo(8, 30, 104, 120) + _bubble(44, 100), "右上の「完了」を押す"),
+        ('<rect class="p" x="12" y="18" width="34" height="34" rx="3"/>' + bars(52, 24, [50, 40]) + rows(64, ["人をタグ付け", "場所を追加"]) + bigbtn(164, "シェア"), "最後に「シェア」を押す"),
+    ]
+    done = (_post_head() + photo(0, 28, 120, 120) + '<circle class="tagc" cx="12" cy="138" r="6"/><circle class="tagi" cx="12" cy="136.5" r="1.8"/><path class="tagi" d="M9 141 q3 -3 6 0"/>' + bars(10, 158, [60, 80]), "タグ付きの投稿になったら完成")
+    return steps_fig("投稿する時のタグ付け（6つの手順）", SUB, [(s, b(c)) for s, c in f], done=done,
+                     note="画面は分かりやすく描いた絵です。ボタンの位置や名前は、アプリの新しさで少し変わることがあります。")
+
+def z_tag_ato():
+    dots = '<g class="chk"><circle cx="100" cy="16" r="1.8"/><circle cx="105" cy="16" r="1.8"/><circle cx="110" cy="16" r="1.8"/></g><circle class="hit" cx="105" cy="16" r="9"/>'
+    f = [
+        (profile_head() + grid(112, 2, hi=0), "プロフィールから投稿を開く"),
+        (_post_head() + dots + photo(0, 28, 120, 120) + bars(10, 158, [60, 80]), "右上の「オプション」を押す"),
+        ('<rect class="p" x="0" y="0" width="120" height="96" opacity=".5"/><rect class="sheet" x="0" y="96" width="120" height="104" rx="12"/>' + rows(108, ["編集", "", ""], hit=0), "「編集」を押す"),
+        (photo(8, 30, 104, 120) + _tap(70, 110), "写真の中の、付けたい場所を押す"),
+        (_search() + _acct(42) + _acct(66, True) + _acct(90), "名前を入れて、一覧から選ぶ"),
+        (topnext("完了") + photo(8, 30, 104, 120) + _bubble(70, 110), "右上の「完了」を押す"),
+    ]
+    return steps_fig("投稿したあとでタグを付ける・直す（6つの手順）", SUB, [(s, b(c)) for s, c in f],
+                     note="タグを外す時も、同じ「編集」から直せます。画面は分かりやすく描いた絵です。")
+
 OUT = {
     "hajimekata": z_hajimekata, "pro": z_pro, "profile": z_profile, "shurui": z_shurui,
-    "hashtag": z_hashtag, "story": z_story, "reel": z_reel, "junban": z_junban, "insight": z_insight,
+    "hashtag": z_hashtag, "story": z_story, "reel": z_reel, "junban": z_junban, "insight": z_insight, "tag": z_tag, "tag-ato": z_tag_ato,
 }
 
 if __name__ == "__main__":

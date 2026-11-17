@@ -20,7 +20,7 @@ hero = ('<section class="ig-hero">\n<p class="ig-eyebrow">はじめてのイン�
         '<p class="ig-lead">アカウント作りから、お店やサービスにお客さんが来るまで。やることを10のステップに並べました。上から順に読むだけで、今日やることが分かります。</p>\n'
         '<div class="ig-rings" aria-label="10のステップ">' + rings + '</div>\n'
         '<ol class="ig-road">' + road + '</ol>\n'
-        '<p class="ig-count">いま読める記事：{N_ARTICLES}本 ・ <a href="articles/otehon-account.html">番外編：お手本アカウント11選を見る</a></p>\n</section>'
+        '<p class="ig-count">いま読める記事：{N_ARTICLES}本 ・ <a href="articles/otehon-account.html">番外編：お手本アカウント11選を見る</a> ・ <a href="articles/hito-tag-tsukekata.html">番外編：人のタグ付けのやり方</a></p>\n</section>'
         '<script>(function(){try{var rd=JSON.parse(localStorage.getItem("ig-read")||"[]")}catch(e){return}'
         'document.querySelectorAll(".ig-road a,.ig-ring").forEach(function(a){var s=a.getAttribute("href").split("/").pop().replace(".html","");'
         'if(rd.indexOf(s)>=0)(a.closest("li")||a).classList.add("seen")})})()</script>')
@@ -127,6 +127,7 @@ article h2:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;b
 .zk-cycle li{position:relative;background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:10px 12px;font-size:14px;line-height:1.55}
 .zk-cycle li:not(:last-child):after{content:"↓";position:absolute;left:50%;bottom:-19px;margin-left:-6px;color:var(--pk);font-weight:900}
 .zk-cycle li:last-child{border-color:var(--pk);border-width:2px}
+.zk .bubr{fill:#222;opacity:.85}.zk .bub{stroke:none}.zk .tagc{fill:#222;opacity:.8}.zk .tagi{fill:none;stroke:#fff;stroke-width:1.2}.zk .sheet{fill:var(--bg);stroke:var(--line)}
 .zk-done .zk-ph{outline:3px solid var(--pk);outline-offset:2px}
 /* article-base: */
 .sec-img{margin:6px 0 18px;padding:0}
