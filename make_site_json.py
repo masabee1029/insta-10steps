@@ -20,7 +20,7 @@ hero = ('<section class="ig-hero">\n<p class="ig-eyebrow">はじめてのイン�
         '<p class="ig-lead">アカウント作りから、お店やサービスにお客さんが来るまで。やることを10のステップに並べました。上から順に読むだけで、今日やることが分かります。</p>\n'
         '<div class="ig-rings" aria-label="10のステップ">' + rings + '</div>\n'
         '<ol class="ig-road">' + road + '</ol>\n'
-        '<p class="ig-count">いま読める記事：{N_ARTICLES}本 ・ <a href="articles/otehon-account.html">番外編：お手本アカウント20選を見る</a> ・ <a href="articles/hito-tag-tsukekata.html">番外編：人のタグ付けのやり方</a></p>\n</section>'
+        '<p class="ig-count">いま読める記事：{N_ARTICLES}本 ・ <a href="articles/otehon-account.html">番外編：お手本アカウント23選を見る</a> ・ <a href="articles/hito-tag-tsukekata.html">番外編：人のタグ付けのやり方</a></p>\n</section>'
         '<script>(function(){try{var rd=JSON.parse(localStorage.getItem("ig-read")||"[]")}catch(e){return}'
         'document.querySelectorAll(".ig-road a,.ig-ring").forEach(function(a){var s=a.getAttribute("href").split("/").pop().replace(".html","");'
         'if(rd.indexOf(s)>=0)(a.closest("li")||a).classList.add("seen")})})()</script>')
